@@ -1,0 +1,14 @@
+
+
+{% block content %}
+<div class="container-fluid">
+  <div class="mx-auto pt-5" style="width: 275px;">
+    <form  method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button type="submit" class="btn btn-sm btn-outline-dark">Accesar</button> /
+      <a href="{% url 'password_reset' %}">¿Olvidaste tu contraseña?</a>
+    </form>
+  </div>
+</div>
+{% endblock %}
